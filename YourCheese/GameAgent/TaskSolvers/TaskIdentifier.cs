@@ -135,10 +135,10 @@ namespace YourCheese
 
 
             Bitmap croppedImage = screen.Clone(rect, screen.PixelFormat);
-            croppedImage.Save("C:/Studio/templates/CURRENTLY_SCANNED.png");
+            croppedImage.Save(Constants.FILE_LOCATION + "/templates/CURRENTLY_SCANNED.png");
             Image<Bgr, byte> Image1 = croppedImage.ToImage<Bgr, byte>(); //Your first image
 
-            String filename = "C:/Studio/templates/" + templateName + ".jpg";
+            String filename = Constants.FILE_LOCATION + "/templates/" + templateName + ".jpg";
             Image<Bgr, byte> Image2 = new Image<Bgr, byte>(filename); //Your second image
 
             double Threshold = 0.7; //set it to a decimal value between 0 and 1.00, 1.00 meaning that the images must be identical

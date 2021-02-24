@@ -205,7 +205,7 @@ namespace YourCheese
 
         private void loadMeshFromImage()
         {
-            Bitmap walkableMeshImage = new Bitmap("C:/Studio/Skeld/WalkableMesh.png");
+            Bitmap walkableMeshImage = new Bitmap(Constants.FILE_LOCATION + "/Skeld/WalkableMesh.png");
 
             walkableMesh = new byte[walkableMeshImage.Width, walkableMeshImage.Height];
             
@@ -228,7 +228,7 @@ namespace YourCheese
 
         private void loadPolygons()
         {
-            using (StreamReader r = new StreamReader("C:/Studio/Skeld/polygons.json"))
+            using (StreamReader r = new StreamReader(Constants.FILE_LOCATION + "/Skeld/polygons.json"))
             {
                 string json = r.ReadToEnd();
                 polygons = JsonConvert.DeserializeObject<List<Polygon>>(json);
@@ -237,7 +237,7 @@ namespace YourCheese
 
         private void loadWaypoints()
         {
-            using (StreamReader r = new StreamReader("C:/Studio/Skeld/waypoints.json"))
+            using (StreamReader r = new StreamReader(Constants.FILE_LOCATION + "/Skeld/waypoints.json"))
             {
                 string json = r.ReadToEnd();
                 waypoints = JsonConvert.DeserializeObject<List<Vertex>>(json);
@@ -246,7 +246,7 @@ namespace YourCheese
 
         private void loadPlaces()
         {
-            using (StreamReader r = new StreamReader("C:/Studio/Skeld/places.json"))
+            using (StreamReader r = new StreamReader(Constants.FILE_LOCATION + "/Skeld/places.json"))
             {
                 string json = r.ReadToEnd();
                 places = JsonConvert.DeserializeObject<List<Vertex>>(json);
@@ -286,7 +286,7 @@ namespace YourCheese
 
         private void loadRegions()
         {
-            using (StreamReader r = new StreamReader("C:/Studio/Skeld/regions.json"))
+            using (StreamReader r = new StreamReader(Constants.FILE_LOCATION + "/Skeld/regions.json"))
             {
                 string json = r.ReadToEnd();
                 regions = JsonConvert.DeserializeObject<List<Region>>(json);

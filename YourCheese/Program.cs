@@ -99,28 +99,6 @@ namespace YourCheese
         [STAThread]
         static void Main(string[] args)
         {
-            /*String text = "Hey you! " +
-                "Ever needed a tenth player in your lobby? Or do your lobbies normally look like this?" +
-                " My creator has no friends and no life so he spent an ridiculous amount of time creating me." +
-                " My name is Glados, and I'm probably better at playing this videogame than 99% of you meatbags. ";*/
-            String text = "Thank you for watching this video. We hope you enjoyed it. If so, leave a like, and subscribe for more videos, you meatbag. Check out our twitch too for more content, you will find the link in the description.";
-            //new MeetingTalker(PlayerInformation.Zero, new GameDataContainer()).SpeakTheText(text);
-            new MeetingTalker(PlayerInformation.Zero, new GameDataContainer()).VoiceIntoFile(text, "ending.wav");
-            System.Threading.Thread.Sleep(6000);
-            return;
-
-
-            //var pathfinder = new PolyPathfinder(skeld.polygons);
-            //List<Waypoint> waypoint = pathfinder.findPath(new Vertex(748,185), new Vertex(579,179));
-            //List<Waypoint> waypoint = pathfinder.findPath(new Vertex(579, 179), new Vertex(203, 374));
-            //Console.WriteLine(waypoint);
-
-            //return;
-            //MapForm mapForm = new MapForm();
-            //mapForm.polygons = skeld.polygons;
-            //mapForm.Show();
-            //System.Threading.Thread.Sleep(99999);
-
             skeld = new SkeldMap();
             behaviorDriver = new BehaviorDriver(skeld);
             eventGenerator = new EventGenerator();
@@ -128,7 +106,7 @@ namespace YourCheese
             botStatusForm = new BotStatus();
             Task.Run(() => Application.Run(botStatusForm));
             System.Threading.Thread.Sleep(3500);
-            // Cheat Init
+            // Memory Init
             if (HamsterCheese.AmongUsMemory.Cheese.Init())
             { 
                 // Update Player Data When Every Game
