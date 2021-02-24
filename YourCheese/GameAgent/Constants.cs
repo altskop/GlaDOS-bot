@@ -8,6 +8,6 @@ namespace YourCheese
 {
     class Constants
     {
-        public static String location = "C:/Temp/GlaDOS";
+        public static String FILE_LOCATION = "C:/Temp/GlaDOS";
     }
 }
